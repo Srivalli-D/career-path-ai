@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Target, Compass } from "lucide-react";
+import { ArrowRight, Sparkles, Target, Compass, BarChart2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "../components/ui/button";
 
@@ -6,27 +6,44 @@ export default function Index() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="w-full py-24 md:py-32 lg:py-40 bg-gradient-to-b from-primary/5 to-background text-center px-4">
+      <section className="w-full pt-24 md:pt-32 pb-16 bg-gradient-to-b from-primary/5 to-background text-center px-4">
         <div className="container mx-auto max-w-4xl flex flex-col items-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary mb-6">
-            <Sparkles className="w-4 h-4 mr-2" />
-            AI-Powered Career Guidance
+          <div className="inline-flex items-center rounded-full border border-primary/20 px-3 py-1 text-xs font-medium transition-colors bg-primary/10 text-primary mb-8">
+            <Sparkles className="w-3.5 h-3.5 mr-1.5" />
+            AI-Powered Career Discovery Platform
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-            Discover Your Perfect <span className="text-primary">Career Path</span>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-foreground">
+            Find Your Dream <span className="bg-gradient-to-r from-primary to-[#0ea5e9] bg-clip-text text-transparent">Career Path</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mb-10">
-            Let our advanced AI analyze your skills, interests, and personality to recommend the ideal career trajectory and create a personalized roadmap to get you there.
+          <p className="text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed">
+            A smart, AI-driven mentor that helps you discover, learn, and grow into the career made for you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" asChild className="text-lg px-8">
+          <div className="flex flex-col sm:flex-row gap-4 mb-20">
+            <Button size="lg" asChild className="text-base px-8 h-12 rounded-lg">
               <Link to="/assessment">
-                Take Free Assessment <ArrowRight className="w-5 h-5 ml-2" />
+                <Compass className="w-4 h-4 mr-2" /> Take Free Assessment <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="text-lg px-8">
-              <Link to="/auth">Sign In</Link>
+            <Button size="lg" variant="outline" asChild className="text-base px-8 h-12 rounded-lg bg-card/50 backdrop-blur-sm">
+              <Link to="/career-results">
+                <BarChart2 className="w-4 h-4 mr-2" /> Explore Careers
+              </Link>
             </Button>
+          </div>
+
+          {/* Stats Row */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
+            {[
+              { value: "50K+", label: "Career Paths Discovered" },
+              { value: "92%", label: "Success Rate" },
+              { value: "1,200+", label: "Learning Resources" },
+              { value: "4.9/5", label: "User Satisfaction" }
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col items-center justify-center p-6 rounded-2xl bg-card border shadow-sm">
+                <span className="text-3xl font-bold text-primary mb-2">{stat.value}</span>
+                <span className="text-xs text-muted-foreground">{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

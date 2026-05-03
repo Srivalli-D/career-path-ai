@@ -33,7 +33,9 @@ export default function CareerResults() {
             </CardHeader>
             <CardContent className="flex-1 flex flex-col justify-between">
               <p className="text-muted-foreground mb-6">{career.desc}</p>
-              <Button className="w-full" variant="outline">View Roadmap</Button>
+              <Button className="w-full" variant="outline" asChild>
+                <Link to="/auth">View Roadmap</Link>
+              </Button>
             </CardContent>
           </Card>
         ))}
