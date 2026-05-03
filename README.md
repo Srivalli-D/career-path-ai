@@ -2,15 +2,19 @@
 
 Career Compass is a modern, AI-driven career guidance platform designed to help professionals and students discover their ideal career trajectories. By analyzing skills, interests, and experience, it provides personalized career recommendations and actionable roadmaps.
 
-![Career Compass Preview](https://github.com/Srivalli-D/career-path-ai/blob/master/src/assets/hero.png?raw=true)
+## 🖼️ App Showcase
 
-## ✨ Features
+| Landing Page | Authentication | Career Results |
+| :--- | :--- | :--- |
+| ![Hero](public/screenshots/hero.png) | ![Auth](public/screenshots/auth.png) | ![Results](public/screenshots/results.png) |
 
-- **AI Career Assessment**: A multi-step interactive evaluation of your unique professional profile.
-- **Smart Matching Engine**: Advanced algorithms that calculate match percentages for various career paths.
-- **Personalized Roadmaps**: Step-by-step guidance on how to transition into your dream role.
-- **Premium UI/UX**: A beautiful, responsive "glassmorphism" interface built with Tailwind CSS.
-- **Supabase Integration**: Secure authentication and real-time data management.
+## ✨ Core Features & Descriptions
+
+- **🤖 AI Career Assessment**: A deep-dive interactive evaluation that uses AI logic to map your unique professional profile to industry trends.
+- **🎯 Precision Matching**: Advanced scoring algorithms that provide a "Match Percentage" for various high-growth career paths.
+- **🗺️ Interactive Roadmaps**: Generates custom learning paths and next steps to bridge the gap between your current skills and your dream job.
+- **💎 Premium Glassmorphism UI**: A state-of-the-art interface built with Tailwind CSS v4, featuring smooth transitions and a sleek dark/light theme.
+- **🔐 Secure Auth System**: Full user account management powered by Supabase, allowing users to save and track their results over time.
 
 ## 🚀 Tech Stack
 
